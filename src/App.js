@@ -41,7 +41,7 @@ function App() {
       }
     ]);
     // recalculate GPA
-    calculateGPA();
+    //calculateGPA();
   }
 
   /**
@@ -59,7 +59,6 @@ function App() {
     marginRight: 10
   };
   const button = {
-    marginLeft: "45%",
     backgroundColor: "white",
     padding: 5,
     borderWidth: 1,
@@ -73,7 +72,7 @@ function App() {
     borderColor: "#ddd"
   };
   const font = {
-    fontFamily: "san-serif"
+    fontFamily: "Monospace"
   };
   const Input = () => {
     return (
@@ -82,13 +81,13 @@ function App() {
           <input
             type="text"
             id="NameSubject"
-            placeholder="ชื่อวิชา"
+            placeholder="Subject"
             style={input}
           />
           <input
             type="text"
             id="IDSubject"
-            placeholder="รหัสวิชา"
+            placeholder="Course code"
             style={input}
           />
           <select type="radio" id="CreditSubject" style={input} style={select}>
@@ -107,9 +106,8 @@ function App() {
             <option value="F">F</option>
             <option value="W">W</option>
           </select>
-          <br />
           <button type="submit" style={button} onClick={addCourse}>
-            เพิ่ม
+            Add+
           </button>
         </div>
       </>
@@ -120,7 +118,7 @@ function App() {
     return (
       <>
         <div className="text-center p-3">
-          <label for="GPA">GPA : {props.GPA}</label>
+          <label for="GPA" >GPA : {props.GPA}</label>
         </div>
       </>
     );
